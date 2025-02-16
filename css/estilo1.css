@@ -12,7 +12,7 @@ main {
 }
 
 .sidebar {
-    background: linear-gradient(180deg, #25529a, #679cc2);
+    
     transition: transform 0.3s;
     z-index: 1000;
     background-color: #c6e7ee;
@@ -77,7 +77,7 @@ main {
 
 /* Animaciones y estilos para Bienvenida */
 .welcome-card {
-    background: linear-gradient(145deg, #d2caca, #7a9ec2);
+   background-color: #c6e7ee;
     border-radius: 15px;
     border: none;
 }
