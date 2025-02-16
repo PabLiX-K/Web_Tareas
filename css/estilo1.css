@@ -15,6 +15,7 @@ main {
     background: linear-gradient(180deg, #25529a, #679cc2);
     transition: transform 0.3s;
     z-index: 1000;
+    background-color: #c6e7ee;
 }
 
 .sidebar.collapsed {
