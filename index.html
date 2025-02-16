@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología y Programación</title>
+    <link rel="shortcut icon" href="../img/los-anteojos.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.section-box').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+        
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('collapsed');
+            document.querySelector('.main-content').classList.toggle('expanded');
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            mostrarSeccion('bienvenida');
+        });
+    </script>
+</head>
+
+<body class="Fondo">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 sidebar h-100 position-fixed">
+                <div class="d-flex flex-column h-100">
+                    <div class="p-3">
+                        <h2 class="text-white text-center mb-4"><i class="fas fa-laptop-code me-2"></i>Menú</h2>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" onclick="mostrarSeccion('bienvenida')">
+                                    <i class="fas fa-home me-2"></i>Bienvenida
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" onclick="mostrarSeccion('programacion')">
+                                    <i class="fas fa-code me-2"></i>Programación
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" onclick="mostrarSeccion('estructura')">
+                                    <i class="fas fa-database me-2"></i>Estructuras
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" onclick="mostrarSeccion('redes')">
+                                    <i class="fas fa-network-wired me-2"></i>Redes
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" onclick="mostrarSeccion('tecnologia')">
+                                    <i class="fas fa-microchip me-2"></i>Tecnología
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Perfil -->
+                    <div class="mt-auto p-3 text-center border-top">
+                        <img src="../img/467756708_3431591340478370_4104102296302287492_n.jpg" alt="Perfil" class="rounded-circle mb-2 profile-img" width="50" height="50">
+                        <p class="text-white mb-0">Pablo Aceituno</p>
+                        <small class="text-muted">Estudiante</small>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Contenido principal -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 main-content px-md-4">
+                <header class="py-4">
+                    <button class="btn btn-dark d-md-none" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="display-5 text-center mt-3">Tecnología y Programación</h1>
+                </header>
+
+                <!-- Sección Bienvenida -->
+                <section id="bienvenida" class="section-box">
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card shadow-lg welcome-card">
+                                    <div class="card-body text-center p-5">
+                                        <h2 class="mb-4"><i class="fas fa-hand-sparkles text-primary"></i> ¡Bienvenido/a!</h2>
+                                        <p class="lead">
+                                            Explora nuestro portal dedicado a la tecnología y programación donde encontrarás:
+                                        </p>
+                                        <ul class="list-unstyled fs-5">
+                                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Guías prácticas de desarrollo</li>
+                                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Recursos de estructuras de datos</li>
+                                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Tutoriales de redes</li>
+                                            <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Últimas tendencias tecnológicas</li>
+                                        </ul>
+                                        <hr class="my-4">
+                                        <p class="text-muted">
+                                            Selecciona una categoría en el menú lateral para comenzar tu aprendizaje
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Programación -->
+                <section id="programacion" class="section-box" style="display:none;">
+                    <h2 class="mb-4"><i class="fas fa-code me-2"></i>Programación</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Guía Figma</h5>
+                                    <p class="card-text">Diseño de diagramación de sitio web utilizando Figma.</p>
+                                    <a href="https://www.figma.com/design/iJj8GyDEWEPBoeewuyHOVv/EXPOTEC2025-GRUPO2?node-id=0-1&p=f&t=6fBAYJbuvEULHe83-0" 
+                                       class="btn btn-primary" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Favicon y Metadatos</h5>
+                                    <p class="card-text">Desarrollo de la fase de Favicon, metadatos y barra de navegación.</p>
+                                    <a href="index.html" 
+                                       class="btn btn-primary" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobre mí</h5>
+                                    <p class="card-text">Diseña fase de Sección "Sobre mí", experiencia y proyectos.</p>
+                                    <a href="Sobre mi.html" 
+                                       class="btn btn-primary" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prueba Escrita</h5>
+                                    <p class="card-text">Realiza prueba escrita sobre Html,css y bootstrap.</p>
+                                    <a href="https://docs.google.com/document/d/11PSo_qHcL7FAnzAbuEsO1sUaJV0sT-tgqgcK-2wvFqo/edit?usp=sharing" 
+                                       class="btn btn-primary" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">FODA</h5>
+                                    <p class="card-text">Desarrolla fase de Sección de FODA.</p>
+                                    <a href="FODA.html" 
+                                       class="btn btn-primary" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Estructuras -->
+                <section id="estructura" class="section-box" style="display:none;">
+                    <h2 class="mb-4"><i class="fas fa-database me-2"></i>Estructura de Datos</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Proyecto Base de Datos</h5>
+                                    <p class="card-text">Creación de base de datos con 10 tablas sobre sistema escolar.</p>
+                                    <a href="https://www.canva.com/design/DAGcdpcfyt4/gS_-ItbGvQ5ptlvKBNbjsQ/edit?utm_content=DAGcdpcfyt4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                                       class="btn btn-success" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Consultas</h5>
+                                    <p class="card-text">15 ejercicios con funciones de bases de datos en MySql.</p>
+                                    <a href="https://www.canva.com/design/DAGdHvQ-YWw/-3Z9_OiMRHrfLOh948onJg/edit" 
+                                       class="btn btn-success" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Byehost Consultas</h5>
+                                    <p class="card-text">10 consultas en base de datos sobre librería con 8 tablas.</p>
+                                    <a href="https://www.canva.com/design/DAGdgSNwmL8/pRn4sBa77KNmQ0lPf2UmWg/edit" 
+                                       class="btn btn-success" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prueba Escrita </h5>
+                                    <p class="card-text">Realice un diagnóstico de sus conocimientos adquiridos por medio de una evaluación practica
+                                        teórica en el salón de clases que consta de 3 series las cuales van a diagnosticar su proceso de
+                                        aprendizaje durante la semana asignada. Tener en cuenta que el tiempo de duración es de
+                                        30min.</p>
+                                    <a href="https://docs.google.com/document/d/1kjj1VKTh0tlpOTvmaIlCcRHOzourqefNTaO2C9Xgi4U/edit?usp=sharing" 
+                                       class="btn btn-success" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Byehost Consultas 2</h5>
+                                    <p class="card-text">Desarrolla 10 ejercicios utilizando el lenguaje DML, DDL y DCL con su dominio de Hostiger.</p>
+                                    <a href="https://www.canva.com/design/DAGe2XAryBk/UFpDBfx8ukU5gtQuHQJN5w/edit?utm_content=DAGe2XAryBk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                                       class="btn btn-success" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Redes -->
+                <section id="redes" class="section-box" style="display:none;">
+                    <h2 class="mb-4"><i class="fas fa-network-wired me-2"></i>Redes</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cables de Redes</h5>
+                                    <p class="card-text">Construcción de cables de red según normas T568 A y B.</p>
+                                    <a href="https://www.canva.com/design/DAGdoYi-SR4/no1FxahP_p_QKh8FnEZ08A/edit" 
+                                       class="btn btn-danger" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Packet Tracer</h5>
+                                    <p class="card-text">Crear diseño de red utilizando las herramientas y funciones de Packet Tracer para crear un diseño lógico
+                                        y físico de una red, incluyendo la configuración de dispositivos y conexiones.</p>
+                                    <a href="https://www.netacad.com/es/courses/getting-started-cisco-packet-tracer?courseLang=es-XL" 
+                                       class="btn btn-danger" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección Tecnología -->
+                <section id="tecnologia" class="section-box" style="display:none;">
+                    <h2 class="mb-4"><i class="fas fa-microchip me-2"></i>Tecnología</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Estándares Web</h5>
+                                    <p class="card-text">Presentación interactiva sobre 20 estándares web con Genially.</p>
+                                    <a href="https://view.genially.com/67911a1118f58057309ab554/presentation-estandares-web" 
+                                       class="btn btn-warning" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Errores Paginas</h5>
+                                    <p class="card-text">Analiza y crea un reporte de estándares web de sitios web comerciales.</p>
+                                    <a href="https://docs.google.com/document/d/1y9dQJkl_f2xhgbdsE5MCBpc1SHQGELW3sZyV32v76eY/edit?usp=sharing" 
+                                       class="btn btn-warning" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rendimiento Navegadores</h5>
+                                    <p class="card-text">Realiza prueba escrita sobre W3C, practica de instalación de
+                                        navegadores Web.</p>
+                                    <a href="https://www.canva.com/design/DAGe_fHXjHo/Y8NJgzP8KcjvUWkIelEWXA/edit?utm_content=DAGe_fHXjHo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                                       class="btn btn-warning" target="_blank">Ver Guía</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="mt-auto py-3 bg-dark text-white">
+                    <p class="mb-0 text-center">&copy; Pablo Josue Aceituno Cardenas - Curso de Tecnología y Programación</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap');
+
+/* Estilos generales */
+body {
+    background-color: #c6e7ee;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Tipografías */
+h1, h2, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Imagen de perfil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Contenedor Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Estilos del header */
+header {
+    background: #212529;
+    border-bottom: 2px solid #343a40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav .nav-link {
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* Barra de búsqueda */
+form .form-control {
+    border-radius: 20px;
+}
+
+/* Dropdown del usuario */
+.dropdown img {
+    border: 2px solid white;
+}
+
+/* Tarjetas */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+/* Colores personalizados para cada tipo de análisis */
+.card.border-success {
+    border-top: 4px solid #198754 !important;
+}
+
+.card.border-danger {
+    border-top: 4px solid #dc3545 !important;
+}
+
+.card.border-warning {
+    border-top: 4px solid #ffc107 !important;
+}
+
+.card.border-primary {
+    border-top: 4px solid #0d6efd !important;
+}
+
+/* Íconos sociales */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #1f1f1f, #343a40);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Ajustes de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
